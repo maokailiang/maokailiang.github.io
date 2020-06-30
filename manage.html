@@ -11,6 +11,8 @@
 				let user = Bmob.User.current();
 				var spanTag = document.getElementById("info");
 				spanTag.innerHTML = user.username;
+				var span = document.getElementById("get");
+				span.innerHTML = user.objectId;
 			}
 		</script>
 	</head>
@@ -19,5 +21,6 @@
 		<button onclick="getLoginUserInfo()">
 			GetLoginUserInfo
 		</button>
+		<span id="get"></span>
 	</body>
 </html>
