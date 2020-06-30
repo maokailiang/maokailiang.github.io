@@ -8,19 +8,47 @@
 			Bmob.initialize("db073b3d3f844d62", "135062");
 			Bmob.debug(true);
 			function getLoginUserInfo(){
-				let user = Bmob.User.current();
+				/*let user = Bmob.User.current();
 				var spanTag = document.getElementById("info");
 				spanTag.innerHTML = user.username;
 				var span = document.getElementById("get");
 				span.innerHTML = user.objectId;
+				var banji = document.getElementById("banji");
+				banji.innerHTML = user.banji;*/
+				
+				// const query = Bmob.student("User");
+				// query.find().then(res => {
+				//     console.log(res)
+				// });
+				//  for (var key in res) {
+				//      for (var key2 in res[key]) {
+				//          alert(key + '->'+key2+" -> " + res[key][key2]);
+				//      }    
+				//  }
+				var Language= Bmob.Object.student("user");    
+				var query = new Bmob.Query(Language);    
+				    
+				// 查询所有数据    
+				query.find({    
+				    success: function(results) {    
+				        console.log("总数:"+results.length);  
+				    },    
+				    error: function(error) {    
+				        console.log("查询出错");    
+				    }    
+				});  
 			}
 		</script>
 	</head>
 	<body>
-		<span id="info"></span>
-		<button onclick="getLoginUserInfo()">
+		<!-- <button onclick="getLoginUserInfo()">
 			GetLoginUserInfo
-		</button>
+		</button> -->
+		<!-- <span id="info"></span>
 		<span id="get"></span>
+		<span id="banji"></span> -->
+		
+		
+			
 	</body>
 </html>
