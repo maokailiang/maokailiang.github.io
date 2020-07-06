@@ -8,14 +8,21 @@
 			Bmob.initialize("db073b3d3f844d62", "135062");
 			Bmob.debug(true);
 			function getLoginUserInfo(){
-				let user = Bmob.User.current();
+				// let user = Bmob.User.current();
+				// var spanTag = document.getElementById("info");
+				// spanTag.innerHTML = user.username;
+				// var span = document.getElementById("get");
+				// span.innerHTML = user.objectId;
+				// var banji = document.getElementById("banji");
+				// banji.innerHTML = user.banji;
+				const query = Bmob.Query('Class1');
+				
 				var spanTag = document.getElementById("info");
-				spanTag.innerHTML = user.username;
+				spanTag.innerHTML = query.stuID;
 				var span = document.getElementById("get");
-				span.innerHTML = user.objectId;
+				span.innerHTML = query.stuname;
 				var banji = document.getElementById("banji");
-				banji.innerHTML = user.banji;
-   
+				banji.innerHTML = query.stuCL;
 			}
 		</script>
 	</head>
