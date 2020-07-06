@@ -19,9 +19,8 @@
 				
 				//显示Class1中信息
 				const query = Bmob.Query('Class1');
-				window.alert(query.stuCL);
 				var spanTag = document.getElementById("info");
-				spanTag.innerHTML = query.get('stuID');
+				spanTag.innerHTML = query.get('objectId');
 				var span = document.getElementById("get");
 				span.innerHTML = query.get('stuname');
 				var banji = document.getElementById("banji");
