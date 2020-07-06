@@ -8,6 +8,7 @@
 			Bmob.initialize("db073b3d3f844d62", "135062");
 			Bmob.debug(true);
 			function getLoginUserInfo(){
+				// 显示当前用户信息
 				// let user = Bmob.User.current();
 				// var spanTag = document.getElementById("info");
 				// spanTag.innerHTML = user.username;
@@ -15,14 +16,15 @@
 				// span.innerHTML = user.objectId;
 				// var banji = document.getElementById("banji");
 				// banji.innerHTML = user.banji;
-				const query = Bmob.Query('Class1');
 				
+				//显示Class1中信息
+				const query = Bmob.Query('Class1');
 				var spanTag = document.getElementById("info");
-				spanTag.innerHTML = query.stuID;
+				spanTag.innerHTML = query.get('stuID');
 				var span = document.getElementById("get");
-				span.innerHTML = query.stuname;
+				span.innerHTML = query.get('stuname');
 				var banji = document.getElementById("banji");
-				banji.innerHTML = query.stuC1;
+				banji.innerHTML = query.get('stuCL');
 			}
 		</script>
 	</head>
