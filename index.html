@@ -305,9 +305,75 @@
   </div>
   <script type="text/javascript">
    $(function(){
-          require(['index']);
+          require(['index.js']);
       })
   </script>
+  <div class="cm-search-wp cui-layer" id="ui-view-12" style="z-index: 3003; display: none;">
+      <style>
+          .cm-search-wp{overflow:hidden;width:100%;height:100%;background-color:#fff;display:block;opacity:1;}
+          .cm-search-wp.cui-layer{border-radius: 0;top: 0;left: 0;padding: 0;margin: 0;position: fixed;}
+          .m-search-top{height:44px;line-height:44px;text-align:center;color:#fff;position:relative;border-bottom:1px solid #bbb;}
+          .cm-search-back{width:44px;height:44px;display:inline-block;text-align:center;}
+          .cm-search-back .icon-back:before{border-left:2px solid #999;border-bottom:2px solid #999;}
+          .cm-search-input{position:relative;top:50%;transform:translateY(-50%);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:#dedede;color:#999;display:block;border-radius:4px;padding:1px;line-height:29px;font-size:15px;text-align:left;}
+          .cm-search-input input{position:absolute;left:0;padding:0 0 0 30px;height:100%;line-height:normal;}
+          .cm-search-input i{margin-left:6px;}
+          .cm-search-btn-wp input{color:#999;width:44px;text-align:center;height:44px;line-height:44px;}
+          .cm-search-wp section{padding:0 10px;margin:0 auto;}
+          .cm-keyword-hot{margin-top:20px;}
+          .cm-keyword-hot>h1{color:#878787;font-weight:lighter;font-size:14px;font-family: Arial,"Microsoft Yahei",sans-serif;}
+          .cm-keyword-hot>div{margin-left:-8px;margin-right:-8px;}
+          .cm-keyword-hot>div a{color:#3a3a3a;display:inline-block;padding:7px 8px;margin:10px 4px 0;background-color:#f1f1f1;border-radius:5px;}
+          .cm-search-tips{position:absolute;top:50px;left:0;width:100%;background-color:#fff;overflow:auto;height:100%;display: none;}
+          .cm-search-tips li{font-size:16px;border-bottom:1px solid #eee;padding:0 20px;}
+          .cm-search-tips li:last-child{margin-bottom: 100px;}
+          .cm-search-tips li a{color:#3a3a3a;width:100%;font-weight:lighter;display:block;padding:10px 0;}
+      </style>
+      
+      <div class="m-search-top">
+          <span class="cm-search-back fl">        
+            <i class="icon-back"></i>        
+          </span>
+          <span class="cm-search-btn-wp fr">    
+              <input type="button" value="搜索" id="cm-search-btn">
+          </span>
   
+          <h1 class="cm-search-input">
+            <i class="ttlmfont"></i>
+            <input type="text" id="search-input" placeholder="输入关键字搜索，如“苹果”">
+          </h1>
+      </div>
+  
+      <section>
+          <div class="cm-keyword-hot">
+              <h1>热门搜索</h1>
+              <div>
+                  
+                      <a href="search.html?keyword=金奇异果">金奇异果</a>
+                  
+                      <a href="search.html?keyword=脐橙">脐橙</a>
+                  
+                      <a href="search.html?keyword=柚子">柚子</a>
+                  
+                      <a href="search.html?keyword=苹果">苹果</a>
+                  
+                      <a href="search.html?keyword=牛油果">牛油果</a>
+                  
+                      <a href="search.html?keyword=火龙果">火龙果</a>
+                  
+                      <a href="search.html?keyword=丸子">丸子</a>
+                  
+                      <a href="search.html?keyword=樱桃">樱桃</a>
+                  
+              </div>
+          </div>
+      </section>
+  
+      <ul class="cm-search-tips">
+      </ul>
+  </div>
+  <div class="view cui-mask" style="width: 100%; height: 937px; position: absolute; left: 0px; top: 0px; z-index: 3001; display: none;" id="ui-view-13">
+	  
+  </div>
 </body>
 </html>

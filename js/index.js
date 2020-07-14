@@ -12,9 +12,9 @@ define(['cPageView','bsCommon', 'UIImageSlider','UISlider', 'UIHeader'],
 		imgSlider: function() {
 			if (this.imgSlider01) return;
 			var data = [
-			  { id: 1, src: '../img/lb/1.jpg'},
-			  { id: 2, src: '../img/lb/2.jpg'},
-			  { id: 3, src: '../img/lb/3.jpg'}
+			  { id: 1, src: 'images/lb/1.jpg'},
+			  { id: 2, src: 'images/lb/2.jpg'},
+			  { id: 3, src: 'images/lb/3.jpg'}
 			];
 			this.imgSlider01 = new UIImageSlider({
 				wrapper: $('.ad-slide ul'),
